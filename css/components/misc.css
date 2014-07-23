@@ -90,6 +90,7 @@
 /* Logo image. */
 .header__logo-image {
   vertical-align: bottom;
+  width: 500px;
 }
 
 /* Wrapper for website name and slogan. */
@@ -141,7 +142,14 @@
 #navigation .block {
   margin-bottom: 0;
 }
-
+#navigation #main-menu{
+    
+    padding-left: 30px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+    border-bottom: solid;
+    border-bottom-color: #aeadad;
+}
 /* Main menu and secondary menu links and menu block links. */
 #navigation .links,
 #navigation .menu {
@@ -149,6 +157,27 @@
   padding: 0;
   text-align: left; /* LTR */
 }
+
+#navigation .links li a {
+ text-decoration: none;
+ color: black;
+}
+
+#navigation .links li:after{
+    content: " \2022";
+}
+
+#navigation .links li.last:after{
+    content: "";
+}
+
+
+#navigation .links li a.active{
+    color: blue;
+}
+
+
+
 #navigation .links li,
 #navigation .menu li {
   /* A simple method to get navigation links to appear in one line. */
@@ -156,6 +185,9 @@
   padding: 0 10px 0 0; /* LTR */
   list-style-type: none;
   list-style-image: none;
+  font-family: sans-serif;
+  font-size: x-large;
+  color: black;
 }
 
 /**
@@ -183,6 +215,22 @@
 .comment__title {      /* Comment title. */
   margin: 0;
 }
+
+h2.block__title.block-title {
+    text-align: right;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: #aeadad;
+}
+
+.block__title:before{
+    content: ".::";
+}
+
+.block__title:after{
+    content: "::.";
+}
+
 
 /**
  * Messages.
@@ -440,6 +488,7 @@ span.field-label {
 /* Block wrapper. */
 .block {
   margin-bottom: 1.5em;
+  text-align: right;
 }
 
 /**
@@ -756,3 +805,80 @@ tr.selected td {
   background-color: #0072b9;
   background-image: url('../../images/progress.gif');
 }
+
+
+.field .field-items{
+    text-align: justify;
+}
+
+*{
+    outline: 0;
+}
+
+.nobullet li{
+    display: inline;
+    float:left;
+    list-style: none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+li a.twitter{
+    display: block;
+    background-image: url('../../images/twitter.png');
+    width: 31px;
+    height: 31px;
+}
+
+li a.facebook{
+    display: block;
+    background-image: url('../../images/facebook.png');
+    width: 31px;
+    height: 31px;
+}
+
+li a.googleplus{
+    display: block;
+    background-image: url('../../images/googleplus.png');
+    width: 31px;
+    height: 31px;
+}
+
+li a.linkedin{
+    display: block;
+    background-image: url('../../images/linkedin.png');
+    width: 31px;
+    height: 31px;
+}
+
+li a.github{
+    display: block;
+    background-image: url('../../images/github.png');
+    width: 31px;
+    height: 31px;
+}
+/*
+h1.page__title{
+    display:none;
+}
+
+
+#rp_article_header{
+    display: block;
+    width: 95%;
+    height: 98%;
+    padding-top: 2%;
+    padding-left: 5%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+
+h1.rp_title{
+    color: #000;  
+}
+
+p.quote{
+    float: right;
+    
+}*/
